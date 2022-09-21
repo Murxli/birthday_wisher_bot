@@ -1,1 +1,2 @@
-# birthday_wisher_bot
+#Ausher Bot - Automated birthday wisher bot
+#Python, Pandas
