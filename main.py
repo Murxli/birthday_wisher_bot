@@ -36,7 +36,7 @@ today_month= now.month
 today = (today_date, today_month)
 
 
-bday_df = pd.read_csv(r"Day-32\Birthday_Wisher\bdays.csv", index_col=0)
+bday_df = pd.read_csv(r"bdays.csv", index_col=0)
 
 
 bday_dict = bday_df.to_dict(orient="index")
