@@ -2,10 +2,11 @@ import smtplib
 from email.message import EmailMessage
 import datetime as dt
 import pandas as pd
+import config
 
 
-my_email = "tormentor10123@gmail.com"
-my_email_password = "wtarrywalwqdplkd"
+my_email = config.my_email
+my_email_password = config.my_email.password
 
 
 
