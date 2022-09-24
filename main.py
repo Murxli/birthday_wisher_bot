@@ -6,7 +6,7 @@ import config
 
 
 my_email = config.my_email
-my_email_password = config.my_email.password
+my_email_password = config.my_email_password
 
 
 
