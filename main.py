@@ -11,7 +11,7 @@ my_email_password = "wtarrywalwqdplkd"
 
 def send_email(receiver) :
     rec_email = new_dict[receiver][1]
-    # wish = new_dict[receiver][2]
+    
     msg = EmailMessage()
     msg["subject"] = "Happy Birthday"
     msg["title"] = f""
@@ -35,12 +35,12 @@ today_date = now.day
 today_month= now.month
 today = (today_date, today_month)
 
-
-bday_df = pd.read_csv(r"bdays.csv", index_col=0)
-
+sheet_id = "1eZiYBHrWEu5FLThZMsEy5CGZepMvg5k8Tok1Nc4LpNA"
+url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv"
+bday_df = pd.read_csv(url, index_col=0)
 
 bday_dict = bday_df.to_dict(orient="index")
-new_dict = {key :[list(map(int,value["dob"].split("/"))), value["mail_id"], value["msg"]] for (key, value) in bday_dict.items()}
+new_dict = {key :[list(map(int,value["dob"].split("/"))), value["mail_id"]] for (key, value) in bday_dict.items()}
 
 for smt in new_dict:
     bday =  tuple(new_dict[smt][0][0:2])
